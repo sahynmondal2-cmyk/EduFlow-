@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import PublicLayout from './components/layout/PublicLayout';
 import DashboardLayout from './components/layout/DashboardLayout';
 
@@ -43,7 +43,7 @@ function ProtectedRoute({ children, role }) {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GlobalSearch />
       <Routes>
         {/* Public Routes with Navbar & Footer */}
@@ -84,7 +84,7 @@ function App() {
           <Route path="analytics" element={<Analytics />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
